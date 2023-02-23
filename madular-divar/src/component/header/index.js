@@ -16,7 +16,7 @@ const header = () => {
           El({
             element: "span",
             child: item,
-            className: "text-xs",
+            className: "text-[14px]",
           }),
         ],
         `${variant.filterBtn}`
@@ -161,7 +161,7 @@ const header = () => {
               El({
                 element: "span",
                 child: "فیلرها",
-                className: "text-xs",
+                className: "text-[14px]",
               }),
             ],
             `${variant.filterBtn}`
@@ -176,7 +176,7 @@ const header = () => {
               El({
                 element: "span",
                 child: "فیلترها",
-                className: "text-xs",
+                className: "text-[14px]",
               }),
             ],
             `${variant.filterBtn}`
