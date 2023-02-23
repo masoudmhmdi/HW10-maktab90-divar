@@ -4,7 +4,7 @@ const card=(title,usage,price,location,img)=>{
     return El({
         element:"div",
         dir:"rtl",
-        className:"w-full sm:w-[49%] xl:w-[32%] h-[150px]  border flex p-3",
+        className:"w-full sm:w-[49%] xl:w-[32%] h-[150px]  border flex p-3 cursor-pointer",
         child:[
             El({
                 element:"div",
