@@ -10,7 +10,7 @@ const sideBar = () => {
         element: "div",
         dir: "rtl",
         className:
-          "hidden lg:flex  lg:w-[26%]  pt-20 pr-8 h-screen overflow-auto fixed right-0",
+          "hidden lg:flex  lg:w-[26%]  pt-20 pr-8 h-screen overflow-auto fixed right-0 scrollbar-hide",
         child: [
           El({
             element: "ul",

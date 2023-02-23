@@ -4,13 +4,25 @@ import El from "../library";
 import button from "../button";
 import { variant } from "../button";
 import img from "../imgTag";
-// import searchSrc from "../../assets/search/"
-{
-  /* <div className="justify-center"></div> */
-}
+import { btnDB } from "../../db";
 
 console.log(variant.inputBtn);
 const header = () => {
+  let btnArr = [];
+  btnDB.forEach((item) =>
+    btnArr.push(
+      button(
+        [
+          El({
+            element: "span",
+            child: item,
+            className: "text-xs",
+          }),
+        ],
+        `${variant.filterBtn}`
+      )
+    )
+  );
   return layout(
     [
       button(
@@ -117,10 +129,10 @@ const header = () => {
         ],
         `${variant.desktopHeaderBtn} text-md`
       ),
-        El({
-          element:"div",
-          className:"w-[1px] h-[20px] bg-gray-300 hidden lg:inline"
-        }),
+      El({
+        element: "div",
+        className: "w-[1px] h-[20px] bg-gray-300 hidden lg:inline",
+      }),
       button(
         [
           El({
@@ -169,76 +181,7 @@ const header = () => {
             ],
             `${variant.filterBtn}`
           ),
-          button(
-            [
-              El({
-                element: "span",
-                child: " asdgasdgfasfdgasفیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
-          button(
-            [
-              El({
-                element: "span",
-                child: "فیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
-          button(
-            [
-              El({
-                element: "span",
-                child: "فیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
-          button(
-            [
-              El({
-                element: "span",
-                child: "فیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
-          button(
-            [
-              El({
-                element: "span",
-                child: "فیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
-          button(
-            [
-              El({
-                element: "span",
-                child: "فیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
-          button(
-            [
-              El({
-                element: "span",
-                child: "فیلترها",
-                className: "text-xs",
-              }),
-            ],
-            `${variant.filterBtn}`
-          ),
+          ...btnArr
         ],
       }),
     ],
